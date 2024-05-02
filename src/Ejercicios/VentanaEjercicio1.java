@@ -1,4 +1,5 @@
 package Ejercicios;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -95,7 +96,10 @@ public class VentanaEjercicio1 extends JFrame {
 		        String fecha = txtFecha.getText();
 		        
 				if (nombre.isEmpty() || apellido.isEmpty() || telefono.isEmpty() || fecha.isEmpty()) {
-					//Falta realizar tema de colores aqui
+					 if(nombre.isEmpty()) txtNombre.setBackground(Color.red);
+				     if(apellido.isEmpty()) txtApellido.setBackground(Color.red);
+				     if(telefono.isEmpty()) txtTlf.setBackground(Color.red);
+				     if(fecha.isEmpty()) txtFecha.setBackground(Color.red);
 				}else {
 					lblDatos.setText("Datos: " + nombre + " " + apellido + ", " + telefono + ", " + fecha);
 				}
