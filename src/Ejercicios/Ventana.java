@@ -1,50 +1,55 @@
 package Ejercicios;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Ventana extends JFrame{
-	
-	private JButton boton;
-	private JTextField txtNombre;
-	
+public class Ventana extends JFrame {
 
-	public Ventana() {
-		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(450,300);
-		
-		setLocation(350,250);
-		setTitle("GRUPO NRO: 13");
-		setLayout(null);
-		
-		
-		//Creación de botón Ejercicio 1
-		boton = new JButton();
-		boton.setText("Ejercicio 1");
-		boton.setBounds(140, 50, 140, 30);
-		getContentPane().add(boton);
-		
-		
-		//Creación de botón Ejercicio 2
-		boton = new JButton();
-		boton.setText("Ejercicio 2");
-		boton.setBounds(140, 100, 140, 30);
-		getContentPane().add(boton);
-		
-		//Creación de botón Ejercicio 3
-		boton = new JButton();
-		boton.setText("Ejercicio 3");
-		boton.setBounds(140, 150, 140, 30);
-		getContentPane().add(boton);
-		
-		
-		
-	}
+    private static final long serialVersionUID = 1L;
+    private JButton boton1;
+    private JButton boton2;
+    private JButton boton3;
 
-	public void cambiarvisibilidad(boolean estado) {
-		
-		setVisible(true);
-	}
+    public Ventana() {
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(450, 300);
+
+        setLocation(350, 250);
+        setTitle("GRUPO NRO: 13");
+        setLayout(null);
+
+        // Creación de botón Ejercicio 1
+        boton1 = new JButton();
+        boton1.setText("Ejercicio 1");
+        boton1.setBounds(140, 50, 140, 30);
+        getContentPane().add(boton1);
+
+        // Creación de botón Ejercicio 2
+        boton2 = new JButton();
+        boton2.setText("Ejercicio 2");
+        boton2.setBounds(140, 100, 140, 30);
+        getContentPane().add(boton2);
+
+        // Creación de botón Ejercicio 3
+        boton3 = new JButton();
+        boton3.setText("Ejercicio 3");
+        boton3.setBounds(140, 150, 140, 30);
+        getContentPane().add(boton3);
+
+        // ActionListener botón 1
+        boton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VentanaEjercicio1 ventana1 = new VentanaEjercicio1();
+                ventana1.cambiarVisibilidad(true);
+            }
+        });
+
+
+    }
+
+    public void cambiarVisibilidad(boolean estado) {
+        setVisible(true);
+    }
 }
