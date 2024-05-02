@@ -39,7 +39,7 @@ public class VentanaEjercicio1 extends JFrame {
 	 */
 	public VentanaEjercicio1() {
 		setTitle("Contactos");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 330);
 		setLocation(350, 250);
 		contentPane = new JPanel();
