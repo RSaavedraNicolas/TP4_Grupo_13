@@ -102,6 +102,14 @@ public class VentanaEjercicio1 extends JFrame {
 				     if(fecha.isEmpty()) txtFecha.setBackground(Color.red);
 				}else {
 					lblDatos.setText("Datos: " + nombre + " " + apellido + ", " + telefono + ", " + fecha);
+					  txtNombre.setBackground(Color.white);
+					  txtApellido.setBackground(Color.white);
+					  txtTlf.setBackground(Color.white);
+					  txtFecha.setBackground(Color.white);
+					  txtNombre.setText(null);
+					  txtApellido.setText(null);
+					  txtTlf.setText(null);
+					  txtFecha.setText(null);
 				}
 				
 				
