@@ -105,9 +105,7 @@ public class VentanaEjercicio2 extends JFrame {
 		textFieldNota2.setColumns(10);
 		textFieldNota2.setBounds(66, 46, 98, 20);
 		panel.add(textFieldNota2);
-		
-		
-		
+	
 		
 		textFieldNota3 = new JTextField();
 		textFieldNota3.setColumns(10);
@@ -147,6 +145,70 @@ public class VentanaEjercicio2 extends JFrame {
 		panel_1.add(textFieldCondición);
 		
 		JButton btnCalcular = new JButton("CALCULAR");
+		btnCalcular.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String nota1 = textFieldNota1.getText();
+				String nota2 = textFieldNota2.getText();
+				String nota3 = textFieldNota3.getText();
+				float total=0.0f;
+				int cantidadNotas = 0;
+				
+				if (!nota1.isEmpty()) {
+					float nota1float = Float.parseFloat(nota1);
+					if(nota1float<1||nota1float>10) {
+						textFieldNota1.setBackground(Color.red);
+					}
+					else {
+						total+=nota1float;
+						cantidadNotas++;
+					}
+				}else {
+					textFieldNota1.setBackground(Color.red);
+				}
+				
+				if (!nota2.isEmpty()) {
+					float nota2float = Float.parseFloat(nota2);
+					if(nota2float<1||nota2float>10||nota2.isEmpty()){
+						textFieldNota2.setBackground(Color.red);
+					}else {
+						total+=nota2float;
+						cantidadNotas++;
+					}
+
+				}
+				else {
+					textFieldNota2.setBackground(Color.red);
+				}
+				if (!nota3.isEmpty()) {
+					float nota3float = Float.parseFloat(nota3);
+					if(nota3float<1||nota3float>10||nota3.isEmpty()) {
+						textFieldNota3.setBackground(Color.red);
+					}else {
+						total+=nota3float;
+						cantidadNotas++;
+					}
+				}
+				else {
+					textFieldNota3.setBackground(Color.red);
+				}
+				
+				String promedioText;
+				float promedio = total / 3;
+				
+		        
+		        if (promedio % 1 == 0) {
+		            promedioText = String.format("%.0f", promedio);
+		        } else {
+		            promedioText = String.format("%.2f", promedio);
+		        }
+		        
+		        if(cantidadNotas ==3) {
+		        	textFieldPromedio.setText(promedioText);
+		        }else {
+		        	textFieldPromedio.setText("");
+		        }
+			}
+		});
 		btnCalcular.setBounds(290, 69, 112, 37);
 		contentPane.add(btnCalcular);
 		
