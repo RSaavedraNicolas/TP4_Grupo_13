@@ -234,10 +234,15 @@ public class VentanaEjercicio2 extends JFrame {
 		btnNuevo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				textFieldNota1.setText("");
+				textFieldNota1.setBackground(Color.white);
 				textFieldNota2.setText("");
+				textFieldNota2.setBackground(Color.white);
 				textFieldNota3.setText("");
+				textFieldNota3.setBackground(Color.white);
 				textFieldPromedio.setText("");
+				textFieldPromedio.setBackground(Color.white);
 				textFieldCondición.setText("");
+				textFieldCondición.setBackground(Color.white);
 			}
 		});
 		btnNuevo.setBounds(290, 117, 112, 37);

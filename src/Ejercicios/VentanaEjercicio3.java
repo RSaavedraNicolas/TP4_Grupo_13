@@ -11,6 +11,10 @@ import javax.swing.JRadioButton;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.JSeparator;
@@ -38,7 +42,22 @@ public class VentanaEjercicio3 extends JFrame {
 			}
 		});
 	}
+	
+	public class Mensaje extends JFrame {
+	    
+	    public Mensaje() {
+	        setTitle("Mensaje");
+	        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			setBounds(150, 230, 400, 150);     
+	
+	        
 
+	    }
+	}
+
+
+	
+	
 	/**
 	 * Create the frame.
 	 */
@@ -98,6 +117,28 @@ public class VentanaEjercicio3 extends JFrame {
 		textField.setBounds(302, 196, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
+		
+	
+		
+		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+			        Mensaje mensaje = new Mensaje();
+			        mensaje.setVisible(true);
+				
+				
+				}
+				
+				
+			
+		});
+		
+		
+		btnAceptar.setBounds(370, 260, 89, 25);
+		contentPane.add(btnAceptar);
+		
+		
 	}
 
 	public void cambiarVisibilidad(boolean b) {
