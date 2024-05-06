@@ -13,6 +13,7 @@ import java.awt.SystemColor;
 import java.awt.Font;
 import javax.swing.UIManager;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -246,6 +247,8 @@ public class VentanaEjercicio2 extends JFrame {
 		btnSalir.setBackground(SystemColor.activeCaption);
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				JFrame ventana = (JFrame) SwingUtilities.getWindowAncestor(contentPane);
+                ventana.dispose();
 			}
 		});
 		btnSalir.setBounds(290, 167, 112, 41);
