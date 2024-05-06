@@ -21,6 +21,8 @@ import javax.swing.JTextField;
 import javax.swing.JSeparator;
 import javax.swing.JSlider;
 import javax.swing.JMenu;
+import javax.swing.JOptionPane;
+
 import java.awt.Canvas;
 
 public class VentanaEjercicio3 extends JFrame {
@@ -45,6 +47,7 @@ public class VentanaEjercicio3 extends JFrame {
 		});
 	}
 	
+	/*
 	public class Mensaje extends JFrame {
 	    
 	    public Mensaje() {
@@ -55,7 +58,7 @@ public class VentanaEjercicio3 extends JFrame {
 	        
 
 	    }
-	}
+	}*/
 
 
 	
@@ -146,8 +149,8 @@ public class VentanaEjercicio3 extends JFrame {
 	                } else if (rbtnLinux.isSelected()) {
 	                	SistemaOperativo = "Linux";
 	                }
-			        Mensaje mensaje = new Mensaje();
-			        mensaje.setVisible(true);
+			        //Mensaje mensaje = new Mensaje();
+			        //mensaje.setVisible(true);
 			        
 			        
 			        if (chckbxProgramacion.isSelected()) {
@@ -160,7 +163,7 @@ public class VentanaEjercicio3 extends JFrame {
 	                	Especialidad += "Diseño Gráfico, ";
 	                }
 				
-				
+	                JOptionPane.showMessageDialog(null,"");
 				}
 				
 				
