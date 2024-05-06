@@ -54,6 +54,14 @@ public class Ventana extends JFrame {
                 ventana2.cambiarVisibilidad(true);
             }
         });
+        
+     // ActionListener botón 3
+        boton3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VentanaEjercicio3 ventana3 = new VentanaEjercicio3();
+                ventana3.cambiarVisibilidad(true);
+            }
+        });
 
 
     }
