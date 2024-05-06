@@ -68,29 +68,6 @@ public class VentanaEjercicio3 extends JFrame {
 		JRadioButton rbtnLinux = new JRadioButton("Linux");
 		rbtnLinux.setBounds(364, 7, 69, 23);
 		panel.add(rbtnLinux);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_1.setBounds(31, 85, 454, 125);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
-		JLabel lblEspecialidad = new JLabel("Elije una especialidad");
-		lblEspecialidad.setBounds(45, 51, 118, 14);
-		lblEspecialidad.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		panel_1.add(lblEspecialidad);
-		
-		JCheckBox cbxProgra = new JCheckBox("Programaci\u00F3n");
-		cbxProgra.setBounds(264, 14, 111, 23);
-		panel_1.add(cbxProgra);
-		
-		JCheckBox cbxAdmi = new JCheckBox("Administraci\u00F3n");
-		cbxAdmi.setBounds(264, 51, 111, 23);
-		panel_1.add(cbxAdmi);
-		
-		JCheckBox cbxDise = new JCheckBox("Dise\u00F1o Gr\u00E1fico");
-		cbxDise.setBounds(264, 88, 111, 23);
-		panel_1.add(cbxDise);
 	}
 
 	public void cambiarVisibilidad(boolean b) {
