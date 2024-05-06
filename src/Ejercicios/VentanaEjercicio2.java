@@ -152,9 +152,11 @@ public class VentanaEjercicio2 extends JFrame {
 				String nota3 = textFieldNota3.getText();
 				float total=0.0f;
 				int cantidadNotas = 0;
-				
+				float nota1float=0;
+				float nota2float=0;
+				float nota3float=0;
 				if (!nota1.isEmpty()) {
-					float nota1float = Float.parseFloat(nota1);
+					nota1float = Float.parseFloat(nota1);
 					if(nota1float<1||nota1float>10) {
 						textFieldNota1.setBackground(Color.red);
 					}
@@ -167,7 +169,7 @@ public class VentanaEjercicio2 extends JFrame {
 				}
 				
 				if (!nota2.isEmpty()) {
-					float nota2float = Float.parseFloat(nota2);
+					nota2float = Float.parseFloat(nota2);
 					if(nota2float<1||nota2float>10||nota2.isEmpty()){
 						textFieldNota2.setBackground(Color.red);
 					}else {
@@ -180,7 +182,7 @@ public class VentanaEjercicio2 extends JFrame {
 					textFieldNota2.setBackground(Color.red);
 				}
 				if (!nota3.isEmpty()) {
-					float nota3float = Float.parseFloat(nota3);
+					nota3float = Float.parseFloat(nota3);
 					if(nota3float<1||nota3float>10||nota3.isEmpty()) {
 						textFieldNota3.setBackground(Color.red);
 					}else {
@@ -207,6 +209,21 @@ public class VentanaEjercicio2 extends JFrame {
 		        }else {
 		        	textFieldPromedio.setText("");
 		        }
+		        
+		        if(comboBox.getSelectedItem().toString()=="Aprobado") {
+	        		if(nota1float<6 || nota2float<6 || nota3float<6) {
+	        			textFieldCondición.setText("Libre");
+	        		}
+	        		else if (nota1float>=8 && nota2float>=8 && nota3float>=8) {
+	        			textFieldCondición.setText("Promocionado");
+	        		}
+	        		else if (nota1float<8 || nota2float<8 || nota3float<8) {
+	        			textFieldCondición.setText("Regular");
+	        		}
+	        	}
+		        else {
+		        	textFieldCondición.setText("Libre");
+		        }
 			}
 		});
 		btnCalcular.setBounds(290, 69, 112, 37);
@@ -215,6 +232,11 @@ public class VentanaEjercicio2 extends JFrame {
 		JButton btnNuevo = new JButton("NUEVO");
 		btnNuevo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				textFieldNota1.setText("");
+				textFieldNota2.setText("");
+				textFieldNota3.setText("");
+				textFieldPromedio.setText("");
+				textFieldCondición.setText("");
 			}
 		});
 		btnNuevo.setBounds(290, 117, 112, 37);
