@@ -13,10 +13,15 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
+import javax.swing.JSeparator;
+import javax.swing.JSlider;
+import javax.swing.JMenu;
+import java.awt.Canvas;
 
 public class VentanaEjercicio3 extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -68,6 +73,31 @@ public class VentanaEjercicio3 extends JFrame {
 		JRadioButton rbtnLinux = new JRadioButton("Linux");
 		rbtnLinux.setBounds(364, 7, 69, 23);
 		panel.add(rbtnLinux);
+		
+		JLabel lblElijeUnaEspecialidad = new JLabel("Elije una especialidad");
+		lblElijeUnaEspecialidad.setBounds(45, 110, 151, 14);
+		contentPane.add(lblElijeUnaEspecialidad);
+		
+		JCheckBox chckbxProgramacion = new JCheckBox("Programaci\u00F3n");
+		chckbxProgramacion.setBounds(302, 80, 124, 23);
+		contentPane.add(chckbxProgramacion);
+		
+		JCheckBox chckbxAdministracion = new JCheckBox("Administraci\u00F3n");
+		chckbxAdministracion.setBounds(302, 106, 124, 23);
+		contentPane.add(chckbxAdministracion);
+		
+		JCheckBox chckbxDiseoGrafico = new JCheckBox("Dise\u00F1o Grafico");
+		chckbxDiseoGrafico.setBounds(302, 132, 124, 23);
+		contentPane.add(chckbxDiseoGrafico);
+		
+		JLabel lblCantidadDeHoras = new JLabel("Cantidad de horas en el computador");
+		lblCantidadDeHoras.setBounds(45, 199, 229, 14);
+		contentPane.add(lblCantidadDeHoras);
+		
+		textField = new JTextField();
+		textField.setBounds(302, 196, 86, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
 	}
 
 	public void cambiarVisibilidad(boolean b) {
