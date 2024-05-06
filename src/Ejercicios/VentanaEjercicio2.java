@@ -1,8 +1,5 @@
 package Ejercicios;
-
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -11,7 +8,6 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.Font;
-import javax.swing.UIManager;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.JTextField;
@@ -22,6 +18,7 @@ import java.awt.event.ActionEvent;
 
 public class VentanaEjercicio2 extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textFieldNota1;
 	private JTextField textFieldNota2;

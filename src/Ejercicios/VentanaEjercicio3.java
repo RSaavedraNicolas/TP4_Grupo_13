@@ -1,6 +1,5 @@
 package Ejercicios;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,27 +12,19 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
-import javax.swing.JSeparator;
-import javax.swing.JSlider;
-import javax.swing.JMenu;
 import javax.swing.JOptionPane;
-
-import java.awt.Canvas;
 
 public class VentanaEjercicio3 extends JFrame {
 
-	private static final ActionListener ActionListener = null;
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textFieldCantidadHoras;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -47,28 +38,11 @@ public class VentanaEjercicio3 extends JFrame {
 		});
 	}
 	
-	/*
-	public class Mensaje extends JFrame {
-	    
-	    public Mensaje() {
-	        setTitle("Mensaje");
-	        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			setBounds(150, 230, 400, 150);     
-	
-	        
-
-	    }
-	}*/
 
 
-	
-	
-	/**
-	 * Create the frame.
-	 */
 	public VentanaEjercicio3() {
 		setTitle("Seleccion Multiple");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 543, 363);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -85,8 +59,6 @@ public class VentanaEjercicio3 extends JFrame {
 		lblSistema.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblSistema.setBounds(10, 11, 159, 14);
 		panel.add(lblSistema);
-		
-		
 		
 		JRadioButton rbtnWind = new JRadioButton("Windows");
 		rbtnWind.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -129,19 +101,18 @@ public class VentanaEjercicio3 extends JFrame {
 		lblCantidadDeHoras.setBounds(41, 199, 229, 14);
 		contentPane.add(lblCantidadDeHoras);
 		
-		textField = new JTextField();
-		textField.setBounds(302, 196, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textFieldCantidadHoras = new JTextField();
+		textFieldCantidadHoras.setBounds(302, 196, 86, 20);
+		contentPane.add(textFieldCantidadHoras);
+		textFieldCantidadHoras.setColumns(10);
 		
-	
 		
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 String SistemaOperativo = "";
 	             String Especialidad = "";
-				
+	             
 	             if (rbtnWind.isSelected()) {
 	                    SistemaOperativo = "Windows";
 	                } else if (rbtnMac.isSelected()) {
@@ -149,31 +120,24 @@ public class VentanaEjercicio3 extends JFrame {
 	                } else if (rbtnLinux.isSelected()) {
 	                	SistemaOperativo = "Linux";
 	                }
-			        //Mensaje mensaje = new Mensaje();
-			        //mensaje.setVisible(true);
-			        
-			        
+
+	             	
 			        if (chckbxProgramacion.isSelected()) {
-			        	Especialidad += "Programación, ";
+			        	Especialidad += "Programación - ";
 	                }
 	                if (chckbxAdministracion.isSelected()) {
-	                	Especialidad += "Administración, ";
+	                	Especialidad += "Administración - ";
 	                }
 	                if (chckbxDiseoGrafico.isSelected()) {
-	                	Especialidad += "Diseño Gráfico, ";
+	                	Especialidad += "Diseño Gráfico - ";
 	                }
-				
-	                JOptionPane.showMessageDialog(null,"");
+	                String mensaje = SistemaOperativo + " - " + Especialidad  + textFieldCantidadHoras.getText() + "Hs";
+	                JOptionPane.showMessageDialog(contentPane, mensaje);
 				}
-				
-				
-			
 		});
-		
 		
 		btnAceptar.setBounds(370, 260, 89, 25);
 		contentPane.add(btnAceptar);
-		
 		
 		
 		JPanel panel_1 = new JPanel();
@@ -189,6 +153,7 @@ public class VentanaEjercicio3 extends JFrame {
 		
 		
 	}
+	
 
 	public void cambiarVisibilidad(boolean b) {
 		setVisible(true);
